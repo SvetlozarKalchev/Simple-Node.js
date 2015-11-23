@@ -1,9 +1,6 @@
 # Simple Node
 
-## 1. General
-This section will teach you how to install the current Node.js version, how to use the awesome package manager, and what tools to use for code management, deployment, etc.
-
-#### Installation
+## 1. Installation
 First thing's first - let's install the last stable Node.js version. The best way to ensure you get the most current release if you are running OSX or Linux is to download the binary from the official website and manually install it. However, using a package manager is much easier and will also do the job.
 
 #### Windows
@@ -33,13 +30,40 @@ You also need to link the installed files to the node binary, so you can use **n
 ---
 No matter what OS you're running, verify that everything runs as it should after the installation. Simply do:
 
-    node -v
+    node -v && npm -v
 
-and you should see the installed Node.js version.
+and you should see the installed Node.js and npm versions.
 
 
 ## 2. Tools
----
+
+#### npm
+The Node ecosystem has awesome tools that make your life as a developer really easy. Perhaps the most essential one you are going to need is **npm** - node's package manager.
+
+Much like in Rails, the de-facto way of managing dependencies in Node is through modules - you download and install different software packages either locally or globally and then you use them in your code or from the command line All this is achieved with **npm**. Writing your own custom modules is really easy and actually a good practice if you have some functionality that can easily be separated. After finishing your package simply use **npm** to upload it in the [official repository](https://www.npmjs.com/).
+
+To install a node package open your shell and simply write:
+
+    npm install [package_name]
+
+This will install the chosen module in the current directory, e.g. locally. If you want to use the package in other projects without repeatedly installing it, choose the --global option on the first run.
+
+    npm install -g [package_name]
+
+Removing packages is really easy:
+
+    npm uninstall [package_name]
+
+or if the package is global
+
+    npm uninstall -g [package_name]
+
+----
+### bower
+While npm will manage our node modules, which we use on the back-end, we don't have anything doing the same for our front-end stuff. Fortunately, the good guys from Twitter wrote bower
+
+
+
   npm, bower, installing packages, .gitignore setup
 
 2. Code Organization
